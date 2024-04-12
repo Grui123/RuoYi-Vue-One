@@ -14,7 +14,7 @@ spring:
     druid:
       # 主库数据源
       master:
-        url: jdbc:h2:mem:test
+        url: jdbc:h2:mem:ry
         username: root
         password: root
       # 从库数据源
