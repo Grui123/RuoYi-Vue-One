@@ -16,13 +16,12 @@ import java.net.InetAddress;
 public class RuoYiApplication {
 
     public static void main(String[] args) throws Exception {
-        // System.setProperty("spring.devtools.restart.enabled", "false");
         ConfigurableApplicationContext context = SpringApplication.run(RuoYiApplication.class, args);
         System.out.println("(♥◠‿◠)ﾉﾞ  启动成功   ლ(´ڡ`ლ)ﾞ  \n");
         String ip = InetAddress.getLocalHost().getHostAddress();
         String port = context.getEnvironment().getProperty("server.port");
         System.out.println("Server running at:\n" +
-                "- Local:   http://localhost:/" + port + "\n" +
-                "- Network: http://" + ip + "/" + port);
+                "- Local:   http://localhost:" + port + "\n" +
+                "- Network: http://" + ip + ":" + port);
     }
 }
