@@ -249,8 +249,8 @@
            String ip = InetAddress.getLocalHost().getHostAddress();
            String port = context.getEnvironment().getProperty("server.port");
            System.out.println("Server running at:\n" +
-                   "- Local:   http://localhost:/" + port + "\n" +
-                   "- Network: http://" + ip + "/" + port);
+                   "- Local:   http://localhost:" + port + "\n" +
+                   "- Network: http://" + ip + ":" + port);
        }
    }
    ~~~

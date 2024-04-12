@@ -8,6 +8,7 @@ spring:
     init:
       schema-locations: classpath:sql/schema-h2.sql
       data-locations: classpath:sql/data-h2.sql
+      encoding: UTF-8
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: org.h2.Driver
