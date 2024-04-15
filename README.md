@@ -5,7 +5,7 @@
 前端使用的RuoYi-Vue的ruoyi-ui
 
 > 基于RuoYi v3.8.7版本 <br>
-> 数据库将MySQL改为H2<br>
+> 使用内置的数据库MariaDB4j代替MySQL<br>
 > 集成Redis<br>
 > 不需要搭建单独的MySQL和Redis
 
