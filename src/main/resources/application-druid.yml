@@ -1,28 +1,21 @@
+mariadb4j:
+  port: 3306
+  encoding: utf8mb4
+  database: ry
+  data: sql/quartz.sql,sql/ry_20231130.sql
+
+
 # 数据源配置
 spring:
-  h2:
-    console:
-      enabled: true
-      path: /h2
-      settings:
-        web-allow-others: true
-  sql:
-    init:
-      schema-locations:
-        - classpath:sql/schema-init.sql
-      data-locations:
-        - classpath:sql/data-init.sql
-      encoding: UTF-8
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    driverClassName: org.h2.Driver
+    driverClassName: org.mariadb.jdbc.Driver
     druid:
       # 主库数据源
       master:
-        url: jdbc:h2:mem:ry
+        url: jdbc:mariadb://localhost:3306/ry
         username: root
         password: root
-
       # 从库数据源
       slave:
         # 从数据源开关/默认关闭
